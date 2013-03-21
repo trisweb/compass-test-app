@@ -12,9 +12,16 @@ map '/assets' do
   environment = Sprockets::Environment.new
   environment.append_path 'assets/javascripts'
   environment.append_path 'assets/stylesheets'
+
+  environment.context_class.class_eval do
+    def asset_path(path, options = {})
+      "/assets/#{path}"
+    end
+  end
  
   # Adds Twitter Bootstrap Javascripts
   environment.append_path Compass::Frameworks['bootstrap'].templates_directory + '/../vendor/assets/javascripts'
+  environment.append_path Compass::Frameworks['bootstrap'].templates_directory + '/../vendor/assets/images'
   run environment
 end
 

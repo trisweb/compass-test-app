@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/trisweb/bootstrap-sass.git
-  revision: 2be2d7d13074d16ea6ca0856cc298dcc6146c449
+  revision: 3e40c4caea4a7324107ecd034feb067d50226057
   specs:
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
